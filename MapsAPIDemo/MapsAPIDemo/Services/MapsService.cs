@@ -25,7 +25,7 @@ namespace MapsAPIDemo.Services
         {
             var client = CreateClient();
             SearchResultModel resultModel = null;
-            _googleMapsKey = "AIzaSyDf3-Pz5mWhY8gt9I-WGjJ3NGRtbnKHpfE";
+            _googleMapsKey = "------PUT YOUR KEY HERE------";
             try
             {
                 var response = await client.GetAsync($"api/place/findplacefromtext/json?" +
