@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:viewModels="clr-namespace:MapsAPIDemo.ViewModels"
+             x:Class="MapsAPIDemo.MainPage">
+
+    <ContentPage.Content>
+        <Grid x:DataType="viewModels:MainViewModel">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <ContentView
+                Grid.Row="0"
+                Content="{Binding DemoMap}">
+            </ContentView>
+            <Label
+                FontSize="Large"
+                Grid.Row="1"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Center"
+                Text="{Binding Name}">
+            </Label>
+            <Label
+                FontSize="Large"
+                Grid.Row="2"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="{Binding Direction}">
+            </Label>
+            <Button
+                Grid.Row="3"
+                Command="{Binding SearchCommand}"
+                Text="Search">
+            </Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
